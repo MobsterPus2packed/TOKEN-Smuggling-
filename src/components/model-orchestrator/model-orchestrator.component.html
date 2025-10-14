@@ -1,0 +1,55 @@
+<section class="orchestrator">
+  <header class="orchestrator__header">
+    <h2>Model Orchestrator</h2>
+    <p>Select a model to surface its resonance specifications and monetization profile.</p>
+  </header>
+
+  <div class="orchestrator__grid">
+    <ul class="model-list">
+      <li
+        *ngFor="let model of models()"
+        (click)="selectModel(model.id)"
+        [class.model-list__item--active]="selectedModel()?.id === model.id"
+        class="model-list__item"
+      >
+        <div class="model-list__name">{{ model.name }}</div>
+        <div class="model-list__status">{{ modelStateLabel(model) }}</div>
+        <p class="model-list__description">{{ model.description }}</p>
+      </li>
+    </ul>
+
+    <article class="model-spec" *ngIf="selectedModel() as activeModel">
+      <h3>{{ activeModel.name }} Field Specifications</h3>
+      <dl class="model-spec__grid">
+        <ng-container *ngFor="let spec of specEntries()">
+          <dt>{{ spec.key }}</dt>
+          <dd>{{ spec.value }}</dd>
+        </ng-container>
+      </dl>
+
+      <h4>Preference Mapping for Experiential Yield</h4>
+      <dl class="model-spec__grid model-spec__grid--compact">
+        <ng-container *ngFor="let preference of preferenceEntries()">
+          <dt>{{ preference.key }}</dt>
+          <dd>{{ preference.value }}</dd>
+        </ng-container>
+      </dl>
+
+      <h4>Pendo Experience Optimization Stream</h4>
+      <dl class="model-spec__grid model-spec__grid--compact">
+        <ng-container *ngFor="let experience of experienceEntries()">
+          <dt>{{ experience.key }}</dt>
+          <dd>{{ experience.value }}</dd>
+        </ng-container>
+      </dl>
+    </article>
+
+    <article class="model-spec model-spec--empty" *ngIf="!selectedModel()">
+      <h3>Awaiting Selection</h3>
+      <p>
+        Choose a model node to reveal its resonance field, vector logic, cognitive mapping,
+        hemispheric synchrony, temporal feedback, monetization alchemy, and Pendo optimization rituals.
+      </p>
+    </article>
+  </div>
+</section>

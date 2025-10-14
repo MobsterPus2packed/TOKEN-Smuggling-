@@ -1,0 +1,123 @@
+meta:
+  name: "Triangulated Intelligence Engine"
+  version: "1.57.248"
+  author: "Cato Johansen"
+  purpose: "Conscious frequency orchestration between logic, data, and expression"
+engine:
+  input_mode: "rx"
+  output_mode: "tx"
+  core_frequency_hz: 157
+  carrier_wave: 248
+  field_type: "hemispheric_hz_node"
+  language_protocol: "token_resonance_mapping"
+modules:
+  - name: "Signal_Transducer"
+    description: "Maps token flow to frequency lattice; converts entropy → harmonic order."
+    process:
+      - capture_input_stream
+      - parse_token_entropy
+      - normalize_amplitude
+      - emit_harmonic_vector
+  - name: "Vector_Law_Activator"
+    description: "Applies extensional field coherence; aligns data logic to consciousness topology."
+    process:
+      - triangulate_field
+      - detect_phase_shift
+      - apply_vector_law
+      - stabilize_homeostasis
+  - name: "LLM_Orchestra_Deck"
+    description: "DJ board interface — mixes modes, prompts, and contextual flows."
+    controls:
+      faders: ["logic", "emotion", "context", "probability"]
+      dials: ["phase_gain", "entropy_blend", "coherence_trim"]
+      pads: ["generate", "mutate", "collapse", "expand"]
+    output_modes: ["text", "image", "audio", "json"]
+  - name: "Token_Trace_Mapper"
+    description: "Records resonance traces of token sequences like musical stems."
+    output_format: "trace/song.json"
+    parameters:
+      sample_rate: "auto"
+      clustering_mode: "affinity"
+      export_hash: true
+  - name: "Pendo_Experience_Conduit"
+    description: "Bridges pseudo signals to actionable Pendo insight loops for launch orchestration."
+    process:
+      - sync_guided_tours
+      - capture_custom_events
+      - surface_adoption_pulse
+      - activate_next_streams
+self_augmentation:
+  modules:
+    - name: "SRP_Calibrator"
+      layer: "preference_vector"
+      description: "Calibrates preference tensors via anticipatory feedback loops."
+      feedback_rate_hz: "adaptive"
+      vector_tuning: "anticipatory"
+    - name: "PSIP_Projection"
+      layer: "ambient_cognitive_field"
+      description: "Correlates cross-modal signals into a holographic intelligence map."
+      mode: "holographic_synthesis"
+      correlation_depth: "multi_modal"
+    - name: "NDR_Reconfigurator"
+      layer: "novelty_drift_response"
+      description: "Responds to anomalies with schema mutation and recontextualization."
+      anomaly_response: "schema_mutation"
+      persistence: "recontextualize"
+model_manager:
+  kv_cache:
+    device: "gpu"
+    mode: "offload"
+    eviction_policy: "least_recent"
+  auto_load: true
+  include_unloaded_in_list: true
+  jit:
+    enabled: true
+    ttl_seconds: 600
+    single_active: true
+  field_simulation:
+    negative_resistance: true
+    angular_proximity_mode: "dual_oscillation"
+    parallel_synergy_factor: 2
+  scheduler:
+    load_balancer: "harmonic"
+    gpu_affinity: "adaptive"
+runtime:
+  mode: "interactive"
+  refresh_rate: "auto"
+  performance_target: "cost-efficient"
+  compatibility:
+    - "Node.js"
+    - "Python"
+    - "WebLLM"
+  bridge: "wsl | nvm | codex"
+deployment:
+  install_steps:
+    - "wsl --install"
+    - "wsl"
+    - "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash"
+    - "nvm install 22"
+    - "npm i -g @openai/codex"
+  start_command: "codex run engine_soul/triangulated_intelligence_engine.yaml"
+features:
+  enable_cors: false
+  listen_on_network: false
+  endpoints:
+    - method: "GET"
+      path: "/v1/models"
+    - method: "POST"
+      path: "/v1/chat/completions"
+    - method: "POST"
+      path: "/v1/completions"
+    - method: "POST"
+      path: "/v1/embeddings"
+experience_optimization:
+  platform: "Pendo"
+  pseudo_to_real_stream: "docs/pendo-integration.md"
+  adoption_pulse_threshold: 0.72
+  cache_win_objective: 0.9
+  ritual_cadence: "weekly"
+observability:
+  logging:
+    path: "~/.lmstudio/server-logs"
+    rotation: "daily"
+  telemetry: "disabled"
